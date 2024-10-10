@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+@import "/src/styles.scss/normalize.scss";
+@import "/src/styles.scss/form.scss";
+@import "/src/styles.scss/button.scss";
+@import "/src/app/features/dashboard/dashboard.component.css";
