@@ -1,2 +1,52 @@
-<app-dashboard />
+<form 
+[formGroup]="userForm"
+(ngSubmit)="submitForm()"
+style="padding: 50px;">
 
+<div>
+  <label for="name">Name </label>
+  <input 
+  type="text"
+  id="name"
+  name="name"
+  formControlName="name"
+  placeholder="name"
+  >
+</div>
+
+<div>
+  <label for="email">Email </label>
+  <input 
+  type="text"
+  id="email"
+  name="email"
+  formControlName="email"
+  placeholder="email"
+  >
+</div>
+
+<div formGroupName="address">
+  <label for="street"> Street</label>
+  <input 
+  type="text"
+  id="street"
+  name="street"
+  formControlName="street"
+  placeholder="street"
+  >
+  <label for="city"> City</label>
+  <input 
+  type="text"
+  id="city"
+  name="city"
+  formControlName="city"
+  placeholder="city"
+  >
+
+</div>
+
+<div>
+  <button type="submit" [disabled]="!userForm.valid" mat-fab extended>  Submit </button>
+</div>
+
+</form>
